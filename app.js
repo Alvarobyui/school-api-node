@@ -2,11 +2,13 @@ const express = require('express');
 const dbConnection = require('./db/connection');
 const bodyParser = require('body-parser');
 const app = express();
+const studentRouters = require('./routes/student');
+const port = 8080;
 
-const port = 9000;
 app.listen(port, () => {
   console.log(`Serving in the port ${port}`)
 });
+app.use(studentRouters)
 
 dbConnection();
 if (dbConnection()){
@@ -22,4 +24,3 @@ app
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
   })
-  .use('/', require('./routes'));
