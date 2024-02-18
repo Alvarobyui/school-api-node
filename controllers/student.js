@@ -69,7 +69,6 @@ const updateStudent = async (req, res) => {
       return res.status(404).json({ error: 'Student not found' });
     }
 
-    // Update existing student object with new values
     existingStudent.name = name;
     existingStudent.lastName = lastName;
     existingStudent.email = email;
