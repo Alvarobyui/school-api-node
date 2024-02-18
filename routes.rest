@@ -4,7 +4,7 @@ GET http://localhost:8080/students
 
 
 ### Get student by id
-GET http://localhost:8080/students/65c967866af37a718838af80
+GET http://localhost:8080/students/65d191ae58472b01d16cf504
 
 
 ### Create student
@@ -20,7 +20,7 @@ content-type: application/json
 }
 
 ### PUT student
-PUT http://localhost:8080/students/65c967866af37a718838af80 HTTP/1.1
+PUT http://localhost:8080/students/65d191ae58472b01d16cf504 HTTP/1.1
 content-type: application/json
 
 {
@@ -33,44 +33,44 @@ content-type: application/json
 
 
 ### DELETE student
-DELETE http://localhost:8080/students/65c967866af37a718838af80 HTTP/1.1
+DELETE http://localhost:8080/students/65d191ae58472b01d16cf504 HTTP/1.1
 
 
 
 // PRODUCTION Deploy
 ### Get all students
-GET https://cse341-instructor.herokuapp.com/students
+GET https://school-api-test.onrender.com/students
 
 
 ### Get student by id
-GET https://cse341-instructor.herokuapp.com/students/622023f642f9ab4cd6e060b3
+GET https://school-api-test.onrender.com/students/65d191c858472b01d16cf505
 
 
 ### Create student
-POST https://cse341-instructor.herokuapp.com/students HTTP/1.1
+POST https://school-api-test.onrender.com/students HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Ashley",
-    "lastName":"Weaver",
-    "email":"aWeaver@test.com",
-    "favoriteColor":"Brown",
-    "birthday":"06/19/2000"
+    "name": "Jose new",
+    "lastName": "Luis",
+    "email": "jose@gmail.com",
+    "phone": "21156415",
+    "course": "biology"
 }
 
 
 ### PUT student
-PUT https://cse341-instructor.herokuapp.com/students/6220bcb39cd507e920c75a0b HTTP/1.1
+PUT https://school-api-test.onrender.com/students/65d191c858472b01d16cf505 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Sarah",
-    "lastName":"Birch",
-    "email":"sarahB@gmail.com",
-    "favoriteColor":"Yellow",
-    "birthday":"06/12/20"
+    "name": "Jose edited",
+    "lastName": "Luis",
+    "email": "jose@gmail.com",
+    "phone": "21156415",
+    "course": "biology and edited"
 }
 
 
 ### DELETE student
-DELETE https://cse341-instructor.herokuapp.com/students/6220e34083149913680f9a64 HTTP/1.1
+DELETE https://school-api-test.onrender.com/students/65d191c858472b01d16cf505 HTTP/1.1
