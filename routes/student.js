@@ -1,18 +1,17 @@
 const express = require('express');
-
-const controller = require('../controllers/student');
+const studentController = require('../controllers/student');
 
 const router = express.Router();
 
-const connect_db = require('../db/connection');
-const mongoose = require('mongoose');
-/* const studentsController = require("../controllers/student"); */
+router.get("/students", studentController.getStudents);
 
-/* router.get("/students", studentsController.test); */
+router.get("/students/:id", studentController.getStudentById);
 
-router.get(
-  "/students",
-  controller.getData
-)
+router.post('/students', studentController.createStudent);
+
+router.put('/students/:id', studentController.updateStudent);
+
+router.delete('/students/:id', studentController.deleteStudent);
 
 module.exports = router;
+

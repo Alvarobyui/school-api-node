@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-const connect_db = require('../db/connection');
-const mongoose = require('mongoose');
 
 const StudentSchema = new mongoose.Schema({
   name: String,
@@ -10,7 +8,7 @@ const StudentSchema = new mongoose.Schema({
     unique: true,
     required: true
   },
-  phone: Number,
+  phone: String,
   course: String
 })
 
